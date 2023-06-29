@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #828282;
+}
+
+nav{
+    margin: 150px auto;
+    width: 450px;
+    height: 450px;
+}
+
+#check{
+    display: none;
+}
+
+#central{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: 150px 150px;
+    z-index: 1;
+}
+
+#central img{
+    width: 100%;
+    border-radius: 50%;
+    transition: all .5s linear;
+}
+
+.link{
+    position: absolute;
+    margin: 195px 195px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all .5s linear;
+}
+
+#check:checked ~ a #android{
+    transform: translateY(-195px);
+    transition: all .5s linear;
+}
+
+#check:checked ~ a #jquery{
+    transform: translateX(+195px);
+    transition: all .5s linear;
+}
+
+#check:checked ~ a #html5{
+    transform: translateY(+195px);
+    transition: all .5s linear;
+}
+
+#check:checked ~ a #java{
+    transform: translateX(-195px);
+    transition: all .5s linear;
+}
+
+#check:checked ~ a #config{
+    transform: translateY(-155px) translateX(+155px);
+    transition: all .5s linear;
+}
+
+#check:checked ~ #central img{
+    margin: 35px 22px;
+    width: 100px;
+    height: 100px;
+    rotate: 360deg;
+    transition: all .5s linear;
+}

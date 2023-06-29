@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu1</title>
+    <style>
+        body{
+            background: #ceecee;
+        }
+        .corpo{
+            width: 1000px;
+            height: 400px;
+            box-shadow: 5px 5px 20px #000;
+        }
+        .item {
+            list-style: none;
+            width: 250px;
+            padding-top: 10px;
+        }
+        .azul {
+            height: 70px;
+            width: 70px;
+            background: #00f;
+            position: absolute;
+            transition: width 2s ease-out;
+        }
+        .laranja {
+            height: 70px;
+            width: 70px;
+            background: rgb(219, 131, 36);
+            position: absolute;
+            transition: width 2s ease-out;
+        }
+        .rosa {
+            height: 70px;
+            width: 70px;
+            background: rgb(223, 112, 233);
+            position: absolute;
+            transition: width 2s ease-out;
+        }
+        .verde {
+            height: 70px;
+            width: 70px;
+            background: rgb(73, 227, 158);
+            position: absolute;
+            transition: width 2s ease-out;
+        }
+        .cinza {
+            height: 70px;
+            width: 250px;
+            background: #aaa;
+            z-index: 0;
+        }
+        a {
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            font-family: arial;
+            z-index: 5;
+            margin: 20px 80px;
+        }
+        .item:hover {
+            cursor: pointer;
+        }
+        .item:hover .azul {
+            width: 250px;
+        }
+        .item:hover .rosa {
+            width: 250px;
+        }
+        .item:hover .verde {
+            width: 250px;
+        }
+        .item:hover .laranja{
+            width: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <ul class="menu">
+            <li class="item">
+                <a href="#">Item 1</a>
+                <div class="azul"></div>
+                <div class="cinza"></div>
+            </li>
+            <li class="item">
+                <a href="#">Item 2</a>
+                <div class="rosa"></div>
+                <div class="cinza"></div>
+            </li>
+            <li class="item">
+                <a href="#">Item 3</a>
+                <div class="verde"></div>
+                <div class="cinza"></div>
+            </li>
+            <li class="item">
+                <a href="#">Item 4</a>
+                <div class="laranja"></div>
+                <div class="cinza"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
