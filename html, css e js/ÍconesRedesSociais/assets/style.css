@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background: linear-gradient(315deg, rgb(16, 247, 0), black 80%);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.caixa .botao{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    float: left;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.caixa .botao .icone{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 100px;
+    transition: all 0.3s ease-out;
+}
+
+.caixa .botao:hover{
+    color: white;
+    width: 230px;
+}
+
+.caixa .botao:nth-child(1):hover .icone {
+    background-color: rgb(57, 250, 4);
+}
+.caixa .botao:nth-child(2):hover .icone {
+    background-color: rgb(202, 2, 202);
+}
+.caixa .botao:nth-child(3):hover .icone{
+    background-color: rgb(2, 85, 179);
+}
+.caixa .botao:nth-child(4):hover .icone{
+    background-color: rgb(0, 0, 138);
+}
+.caixa .botao:nth-child(5):hover .icone{
+    background-color: rgb(0, 0, 0);
+}
+
+.caixa .botao .icone i {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 100px;
+    margin-left: 20px;
+    color: white;
+}
+
+.caixa .botao:nth-child(1):hover span{
+    color: rgb(57, 250, 4);
+    font-weight: bold;
+}
+.caixa .botao:nth-child(2):hover span{
+    color: rgb(202, 2, 202);
+    font-weight: bold;
+}
+.caixa .botao:nth-child(3):hover span{
+    color: lightblue;
+    font-weight: bold;
+}
+.caixa .botao:nth-child(4):hover span{
+    color: rgb(1, 1, 246);
+    font-weight: bold;
+}
+.caixa .botao:nth-child(5):hover span{
+   color: black;
+   font-weight: bold;
+}
+
+#centZap{
+    margin-left: 30px;
+}
+#centInst{
+    margin-left: 29px;
+}
+#centLink{
+    margin-left: 30px;
+}
+#centGit{
+    margin-left: 27px;
+}
