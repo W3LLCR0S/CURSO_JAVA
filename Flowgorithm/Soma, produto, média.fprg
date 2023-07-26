@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paulo.68909"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-02 03:38:03 "/>
+        <attribute name="created" value="cGF1bG8uNjg5MDk7VUVQVDAyLTg3MzItRTsyMDIzLTA1LTAyOyIwMjozMjo1MiAiOzI4MzM="/>
+        <attribute name="edited" value="cGF1bG8uNjg5MDk7VUVQVDAyLTg3MzItRTsyMDIzLTA1LTAyOyIwMzozODowMyAiOzQ7Mjk0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Informe 5 valores num&#233;ricos reais&quot;" newline="True"/>
+            <declare name="valor1, valor2, valor3, valor4, valor5" type="Real" array="False" size=""/>
+            <input variable="valor1"/>
+            <input variable="valor2"/>
+            <input variable="valor3"/>
+            <input variable="valor4"/>
+            <input variable="valor5"/>
+            <declare name="soma, produto, media" type="Real" array="False" size=""/>
+            <assign variable="soma" expression="valor1+valor2+valor3+valor3+valor4+valor5"/>
+            <assign variable="produto" expression="valor1*valor2*valor3*valor3*valor4*valor5"/>
+            <assign variable="media" expression="(valor1+valor2+valor3+valor3+valor4+valor5)/5"/>
+            <output expression="&quot;A soma dos valores &#233; &quot; &amp;soma" newline="True"/>
+            <output expression="&quot;O produto dos valores &#233; &quot; &amp;produto" newline="True"/>
+            <output expression="&quot;A m&#233;dia dos valores &#233; &quot; &amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paulo.68909"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-02 04:51:20 "/>
+        <attribute name="created" value="cGF1bG8uNjg5MDk7VUVQVDAyLTg3MzItRTsyMDIzLTA1LTAyOyIwMzo1NzozOSAiOzI4NDY="/>
+        <attribute name="edited" value="cGF1bG8uNjg5MDk7VUVQVDAyLTg3MzItRTsyMDIzLTA1LTAyOyIwNDo1MToyMCAiOzI7Mjk0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Insira seu nome&quot;" newline="True"/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <input variable="nome"/>
+            <output expression="&quot;Insira seu sobrenome&quot;" newline="True"/>
+            <declare name="snome" type="String" array="False" size=""/>
+            <input variable="snome"/>
+            <output expression="&quot;insira sua idade&quot;" newline="True"/>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <input variable="idade"/>
+            <output expression="&quot;Insira sua nacionalidade&quot;" newline="True"/>
+            <declare name="nacio" type="String" array="False" size=""/>
+            <input variable="nacio"/>
+            <output expression="&quot;Ol&#225; &quot; &amp;nome&amp; &quot; &quot; &amp;snome&amp; &quot;. Voc&#234; tem &quot; &amp;idade&amp; &quot; anos de idade e nasceu em &quot; &amp;nacio&amp; &quot;.&quot;" newline="True"/>
+            <output expression="&quot;Voc&#234; quer saber o valor do d&#243;lar hoje? (s/n)&quot;" newline="True"/>
+            <declare name="var" type="String" array="False" size=""/>
+            <input variable="var"/>
+            <if expression="var == &quot;s&quot;">
+                <then>
+                    <output expression="&quot;O valor de 1  d&#243;lar equivale a 5,05 real brasileiro&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Nosso sistema identificou que voc&#234; est&#225; em um ve&#237;culo em movimento. Qual a velocidade atual dele em km/h? (digite somente n&#250;meros)&quot;" newline="True"/>
+            <declare name="vel" type="Real" array="False" size=""/>
+            <input variable="vel"/>
+            <if expression="vel &gt;= 100">
+                <then>
+                    <output expression="&quot;O ve&#237;culo foi multado.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

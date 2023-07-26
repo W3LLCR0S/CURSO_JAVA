@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paulo.68909"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-02 04:11:56 "/>
+        <attribute name="created" value="cGF1bG8uNjg5MDk7VUVQVDAyLTg3MzItRTsyMDIzLTA1LTAyOyIwMzo1NzozOSAiOzI4NDY="/>
+        <attribute name="edited" value="cGF1bG8uNjg5MDk7VUVQVDAyLTg3MzItRTsyMDIzLTA1LTAyOyIwNDoxMTo1NiAiOzE7Mjk0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Insira um valor em metros&quot;" newline="True"/>
+            <declare name="metro, cm, mm, converter1, converter2, converter3" type="Real" array="False" size=""/>
+            <input variable="metro"/>
+            <assign variable="converter1" expression="metro*10"/>
+            <assign variable="converter2" expression="metro*100"/>
+            <assign variable="converter3" expression="metro*1000"/>
+            <output expression="metro&amp; &quot;m em decimetro equivale a &quot; &amp;converter1" newline="True"/>
+            <output expression="metro&amp; &quot;m em centimetro equivale a &quot; &amp;converter2" newline="True"/>
+            <output expression="metro&amp; &quot;m em milimitro equivale a &quot; &amp;converter3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
