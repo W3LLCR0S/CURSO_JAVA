@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.choices img {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+}

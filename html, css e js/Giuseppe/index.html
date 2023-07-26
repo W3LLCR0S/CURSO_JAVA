@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Giuseppe</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            !function() {
+                document.documentElement.className = "js";
+                var e, t;
+                (t = document.createElement("style")).innerHTML = "root: { --tmp-var: bold; }",
+                document.head.appendChild(t),
+                e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")),
+                t.parentNode.removeChild(t),
+                e || alert("Please view this demo in a modern browser that supports CSS Variables.")
+            }();
+        </script>
+    </head>
+    <body>
+        <main>
+            <div class="menu-wrap">
+                <nav class="menu">
+                    <div class="menu__item">
+                        <a class="menu__item-link" href="bio.html">biografia</a>
+                        <div class="marquee">
+                            <div class="marquee__inner-wrap">
+                                <div class="marquee__inner" aria-hidden="true">
+                                    <span>Veja como me encontrei na carreira de progamas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__item">
+                        <a class="menu__item-link" href="trab.html">trabalhos</a>
+                        <div class="marquee">
+                            <div class="marquee__inner-wrap">
+                                <div class="marquee__inner" aria-hidden="true">
+                                    <span>Consulte os meus tipos de trabalhos e os devidos preços</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__item">
+                        <a class="menu__item-link" href="fei.html">feitos</a>
+                        <div class="marquee">
+                            <div class="marquee__inner-wrap">
+                                <div class="marquee__inner" aria-hidden="true">
+                                    <span>Veja os feitos desse nobre garoto de programa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__item">
+                        <a class="menu__item-link" href="cont.html">contato</a>
+                        <div class="marquee">
+                            <div class="marquee__inner-wrap">
+                                <div class="marquee__inner" aria-hidden="true">
+                                    <span>Entre em contato via ZAPZAP, Instagram e via TINDER PFV!!!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

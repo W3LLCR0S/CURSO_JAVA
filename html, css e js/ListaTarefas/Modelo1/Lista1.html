@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de nomes</title>
+    <link rel="stylesheet" href="estilo.css"><!--Conecta o uso do arquivo css-->
+    <link rel="icon" href="lista.png" type="img/png">
+    <!--Altera o ícone que aparece na aba da página para o desenho escolhido-->
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Lista de Tarefas</h1>
+        <article class="flex">
+            <input type="text" id="minhaCaixa" placeholder="Insira uma nova Tarefa">
+            <button id="btnAdicionar">Adicionar</button>
+        </article>
+    </header>
+    <section id="lista">
+        <ul id="itens">
+            <li class="checado">Lavar Louça<span class='fechar'>X</span></li>
+            <li class="checado">Limpar Casa<span class='fechar'>X</span></li>
+        </ul>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

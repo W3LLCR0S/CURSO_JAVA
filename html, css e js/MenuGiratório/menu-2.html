@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-2</title>
+    <link rel="stylesheet" href="assets/style-2.css">
+    <style>
+        /* Estilos específicos para o botão "Voltar" */
+        .btn-voltar {
+            /* Gradiente de cores para o background do botão */
+            background: linear-gradient(to right, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+            background-size: 300% 100%;
+            animation: glitter 2s linear infinite; /* Animação de brilho (glitter) */
+        }
+
+        /* Animação de brilho (glitter) */
+        @keyframes glitter {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Container centralizado com flexbox -->
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
+        <div style="margin-bottom: 20px;">
+            <!-- Botões existentes -->
+            <button class="btn btn-verde">Login</button>
+            <a href="#" class="btn btn-lilas">Salvar</a>
+            <input type="submit" class="btn btn-azul" value="Ok">
+        </div>
+        <!-- Botão "Voltar" -->
+        <button class="btn btn-voltar" onclick="window.location.href = 'index.html';">Voltar</button>
+    </div>
+</body>
+
+</html>

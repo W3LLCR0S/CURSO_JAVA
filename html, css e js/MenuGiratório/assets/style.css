@@ -1,0 +1,85 @@
+/* style.css */
+
+/* Define margens e preenchimento para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define o plano de fundo do corpo do documento */
+body {
+    background: #B0E0E6;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* Esconde a caixa de seleção do menu de navegação */
+#check {
+    display: none;
+}
+
+/* Estilos para o elemento central */
+#central {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Estilos para a imagem do elemento central */
+#central img {
+    width: 100%;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Arrumar a área clicavel do botão central */
+
+/* Estilos para os links de navegação */
+.link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos específicos para os links quando a caixa de seleção estiver marcada */
+#check:checked~a #android {
+    transform: translate(-250%, -50%);
+}
+
+#check:checked~a #jquery {
+    transform: translate(150%, -50%);
+}
+
+#check:checked~a #html5 {
+    transform: translate(-50%, 150%);
+}
+
+#check:checked~a #java {
+    transform: translate(-50%, -250%);
+}
+
+#check:checked~a #config {
+    transform: translate(150%, -250%);
+}
+
+/* Estilos específicos para a imagem central quando a caixa de seleção estiver marcada */
+#check:checked~#central img {
+    margin: 0 auto; /* Centralizar o botão horizontalmente */
+    transform: rotate(225deg) scale(0.6); /* Reduzir o tamanho do botão com efeito de escala */
+    transition: all .5s linear;
+}

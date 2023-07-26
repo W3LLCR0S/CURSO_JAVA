@@ -1,0 +1,64 @@
+/* Adicionando cores mais bonitas e fundo com gradiente */
+body {
+    background: linear-gradient(to right, #ffd700, #fde2e6);
+}
+
+/* Centralizando os botões na tela */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos gerais para os botões */
+.btn {
+    font-family: 'Caprasimo', cursive;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Botão verde */
+.btn-verde {
+    background: #4CAF50;
+    color: #FFFFFF;
+    box-shadow: 0 5px 0 #388E3C;
+}
+
+.btn-verde:hover {
+    background: #388E3C;
+    color: #FFFFFF;
+    box-shadow: 0 5px 0 #388E3C;
+}
+
+/* Botão lilás */
+.btn-lilas {
+    background: #9C27B0;
+    color: #FFFFFF;
+    box-shadow: 0 5px 0 #6A1B9A;
+}
+
+.btn-lilas:hover {
+    background: #6A1B9A;
+    color: #FFFFFF;
+    box-shadow: 0 5px 0 #6A1B9A;
+}
+
+/* Botão azul */
+.btn-azul {
+    background: #2196F3;
+    color: #FFFFFF;
+    box-shadow: 0 5px 0 #1565C0;
+}
+
+.btn-azul:hover {
+    background: #1565C0;
+    color: #FFFFFF;
+    box-shadow: 0 5px 0 #1565C0;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Efeito Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            widows: 100vw;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="500" height="200" id="canv"></canvas>
+    <script>
+        const canvas = document.getElementById('canv');
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width = document.body.offsetWidth;
+        const h = canvas.height = document.body.offsetHeight;
+        const cols = Math.floor(w / 10) + 1;
+        const yPos = Array(cols).fill(0);
+        const speeds = Array(cols).fill(1).map(() => Math.random() * 5 + 1); // Array de velocidades aleatórias para cada linha
+
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+
+        function DesenhaMatrix() {
+            ctx.fillStyle = '#0001';
+            // ctx.fillStyle = 'rgba(0, 0, 0, 0.067)'; // Em rgba
+            ctx.fillRect(0, 0, w, h);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = '10pt monospace';
+
+            yPos.forEach((y, ind) => {
+                const text = String.fromCharCode(Math.random() * 128);
+                const x = ind * 10;
+                ctx.fillText(text, x, y);
+
+                if (y > 130 + Math.random() * 100000) yPos[ind] = 0;
+                else yPos[ind] = y + speeds[ind]; // Adicionando a velocidade para cada linha
+            });
+        }
+
+        setInterval(DesenhaMatrix, 50);
+    </script>
+</body>
+
+</html>

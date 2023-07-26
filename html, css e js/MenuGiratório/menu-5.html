@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-5</title>
+    <style>
+        body {
+            background: #ceecee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .corpo {
+            width: 350px;
+            height: 420px;
+            background: #fff;
+            box-shadow: 5px 5px 20px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .item {
+            margin: 5px auto;
+            position: relative;
+        }
+
+        .azul,
+        .laranja,
+        .rosa,
+        .verde {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            transition: width 2s ease-out;
+        }
+
+        .azul {
+            background: #00f;
+        }
+
+        .laranja {
+            background: rgb(219, 131, 36);
+        }
+
+        .rosa {
+            background: rgb(223, 112, 233);
+        }
+
+        .verde {
+            background: rgb(73, 227, 158);
+        }
+
+        .cinza {
+            height: 70px;
+            width: 250px;
+            background: #aaa;
+            z-index: 0;
+        }
+
+        a {
+            position: relative;
+            color: #99aa5f;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            z-index: 5;
+        }
+
+        .item:hover {
+            cursor: pointer;
+        }
+
+        .item:hover .azul,
+        .item:hover .laranja,
+        .item:hover .rosa,
+        .item:hover .verde {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <ul class="menu">
+            <li class="item">
+                <a href="#">Item 1</a>
+                <div class="azul"></div>
+                <div class="cinza"></div>
+            </li>
+            <li class="item">
+                <a href="#">Item 2</a>
+                <div class="rosa"></div>
+                <div class="cinza"></div>
+            </li>
+            <li class="item">
+                <a href="#">Item 3</a>
+                <div class="verde"></div>
+                <div class="cinza"></div>
+            </li>
+            <li class="item">
+                <a href="#">Item 4</a>
+                <div class="laranja"></div>
+                <div class="cinza"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

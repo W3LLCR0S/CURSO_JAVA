@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-4</title>
+</head>
+<style>
+    body {
+        background: #99aa5f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .corpo {
+        width: 300px;
+        height: 380px;
+        background: #fff;
+        box-shadow: 5px 5px 20px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .item {
+        list-style: none;
+        margin: 15px auto;
+        width: 280px;
+    }
+
+    .azul {
+        height: 70px;
+        width: 70px;
+        background: #00f;
+        position: absolute;
+        /*tempo para mudar o hover*/
+        transition: width 0.5s ease-out;
+    }
+
+    .cinza {
+        height: 70px;
+        width: 250px;
+        background: #aaa;
+    }
+
+    a {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        font-family: arial;
+        z-index: 1; /* Posicionamento em tela (camada mais para frente ou para trás) */
+        margin: 20px 80px;
+    }
+
+    .item:hover {
+        cursor: pointer;
+    }
+
+    .item:hover .azul {
+        width: 250px
+    }
+</style>
+
+<body>
+    <div class="corpo">
+        <ul class="menu">
+            <li class="item">
+                <a href="#">Item 1 </a>
+                <div class="azul"> </div>
+                <div class="cinza"> </div>
+            </li>
+            <li class="item">
+                <a href="#">Item 2 </a>
+                <div class="azul"> </div>
+                <div class="cinza"> </div>
+            </li>
+            <li class="item">
+                <a href="#">Item 3 </a>
+                <div class="azul"> </div>
+                <div class="cinza"> </div>
+            </li>
+            <li class="item">
+                <a href="#">Item 4 </a>
+                <div class="azul"> </div>
+                <div class="cinza"> </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
