@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exemplo Flexbox</title>
+</head>
+
+<body>
+    <h1>Exemplo Flexbox</h1>
+
+    <h2>justify-content: space-between</h2>
+    <div class="container justify-space-between">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>justify-content: space-around</h2>
+    <div class="container justify-space-around">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>align-items: flex-start</h2>
+    <div class="container align-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>align-items: center</h2>
+    <div class="container align-center">
+        <div class="box">1</div>
+        <div class="box" style="height: 150px;">2</div> <!-- Altura maior -->
+        <div class="box">3</div>
+    </div>
+
+    <h2>align-items: flex-end</h2>
+    <div class="container align-end">
+        <div class="box">1</div>
+        <div class="box" style="height: 150px;">2</div> <!-- Altura maior -->
+        <div class="box">3</div>
+    </div>
+
+    <h2>flex-direction: row</h2>
+    <div class="container flex-row">
+        <div class="box">1</div>
+        <div class="box" style="height: 150px;">2</div> <!-- Altura maior -->
+        <div class="box">3</div>
+    </div>
+
+    <h2>flex-direction: column</h2>
+    <div class="container flex-column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>flex-wrap: wrap</h2>
+    <div class="container wrap">
+        <div class="box" style="width: 150px;">1</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">2</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">3</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">4</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">5</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">6</div> <!-- Largura maior -->
+    </div>
+
+    <h2>flex-wrap: wrap-reverse</h2>
+    <div class="container wrap-reverse">
+        <div class="box" style="width: 150px;">1</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">2</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">3</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">4</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">5</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">6</div> <!-- Largura maior -->
+    </div>
+
+    <h2>flex-wrap: nowrap</h2>
+    <div class="container nowrap">
+        <div class="box" style="width: 150px;">1</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">2</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">3</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">4</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">5</div> <!-- Largura maior -->
+        <div class="box" style="width: 150px;">6</div> <!-- Largura maior -->
+    </div>
+</body>
+
+</html>

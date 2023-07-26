@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #liga {
+        color: yellow;
+        background-color: #DDaa00;
+        border-color: yellow;
+    }
+
+    #pis {
+        color: rgb(233, 200, 79);
+        background-color: #4f490a;
+        border-color: #755011;
+    }
+
+    #des {
+        color: #9ca8f2;
+        background-color: #2e306c;
+        border-color: #000000;
+    }
+
+    #pow {
+        color: #ffffff;
+        background-color: #ff0000;
+        border-color: #ff8c00;
+    }
+
+    #res {
+        color: #114500;
+        background-color: #00ff15;
+        border-color: #00bbff;
+    }
+</style>
+
+<body>
+
+    <h1> Lâmpada Dinâmica </h1>
+    <img src="image/OFF.jpg" id="luz"> <br>
+    <button id="liga"> Acender </button>
+    <button id="des"> Apagar </button>
+    <button id="pow"> Quebrar </button>
+    <button id="res"> Restaurar </button>
+    <button id="pis"> Piscar </button>
+    <!--onmouseover="acender()" onmouseout="apagar()" onclick="quebrar()">  -->
+</body>
+
+<script>
+    let lampada = document.querySelector('#luz')
+    let liga = document.querySelector('#liga')
+    let des = document.querySelector('#des')
+    let pow = document.querySelector('#pow')
+    let res = document.querySelector('#res')
+    let pis = document.querySelector('#pis')
+
+    liga.addEventListener('click', acender)
+    des.addEventListener('click', apagar)
+    res.addEventListener('click', restaurar)
+    pow.addEventListener('click', quebrar)
+    pis.addEventListener('click', piscar)
+
+    function acender() {
+        if (lampada.getAttribute("src") == "image/QUEBRADA.jpg") {
+            alert("Não é possível acender, a lâmpada está quebrada.")
+        } else {
+            lampada.src = 'image/ON.jpg'
+        }
+    }
+    function apagar() {
+        if (lampada.getAttribute("src") == "image/QUEBRADA.jpg") { alert("Não é possível apagar, a lampada está quebrada.") } else {
+            lampada.src = 'image/OFF.jpg'
+        }
+    }
+    function quebrar() {
+        lampada.src = 'image/QUEBRADA.jpg'
+    }
+
+    function restaurar() {
+        if (lampada.getAttribute("src") == "image/ON.jpg" || lampada.getAttribute("src") == "image/OFF.jpg") { alert("Não é necessário restaurar a lâmpada") }
+        else {
+            lampada.src = 'image/OFF.jpg'
+        }
+    }
+
+    function piscar() {
+        if (lampada.getAttribute("src") == "image/QUEBRADA.jpg") { alert("Não é possível piscar, a lâmpada está quebrada.") } else {
+            let intervalo = 0;
+            let contador = 0;
+            while (contador < 10) {
+                intervalo += 300;
+                //settimeout - elemento, tempo
+                setTimeout("document.querySelector('#luz').src = 'image/ON.jpg'", intervalo);
+                intervalo += 300;
+                setTimeout("document.querySelector('#luz').src = 'image/OFF.jpg'", intervalo);
+                contador++;
+            }
+        }
+    }
+
+    function desabilitar() {
+        btnAC.disabled = true;
+    }
+
+    function habilitar() {
+        btnAC.disabled = false;
+    }
+</script>
+
+</html>

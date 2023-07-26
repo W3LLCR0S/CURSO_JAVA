@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="image/gas_alc.png">
+        <h1>Calculador de combustível</h1>
+    </header>
+
+    <main>
+        <img src="image/neutro.png" id="status">
+        <form name="formularioFlex">
+            <input type="number" class="valor" id="valor1" size="8" placeholder="ETANOL" name="valorEtanol">
+            <input type="number" class="valor" id="valor2" size="8" placeholder="GASOLINA" name="valorGasolina">
+            <br>
+            <input type="button" class="botao1" value="calcular" onclick="calcular()">
+            <input type="reset" class="botao2" value="limpar" onclick="limpar()">
+        </form>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Paulo <span>&reg;</span></p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #corpo {
+            font-family: sans-serif;
+        }
+
+        #area {
+            background: #d5d5d5;
+            color: #3f3f3f;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        #btn {
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            border-color: #ff6565;
+        }
+    </style>
+</head>
+
+<body id="corpo">
+
+    <h1>Atividade sobre o Controle do DOM com JavaScript</h1>
+    <div id="area"> SENAC - Londrina </div>
+    <button id="btn">CLIQUE Aqui!</button>
+
+    <script>
+        let corpo = document.getElementById('corpo')
+        let area = document.getElementById('area')
+        let btn = document.getElementById('btn')
+
+        corpo.addEventListener('click', alterarCorpo)
+        area.addEventListener('click', alterarArea)
+        area.addEventListener('mouseover', sobreArea)
+        area.addEventListener('mouseout', foraArea)
+        btn.addEventListener('click', alterarBtn)
+
+        function alterarCorpo() {
+            corpo.style.backgroundColor = 'gray'
+        }
+        function alterarArea() {
+            area.style.backgroundColor = 'pink'
+        }
+        function alterarBtn() {
+            btn.style.backgroundColor = 'blue'
+        }
+        function sobreArea() {
+            area.style.backgroundColor = 'green'
+            area.style.color = 'yellow'
+        }
+        function foraArea() {
+            area.style.backgroundColor = 'red'
+            area.style.color = 'white'
+        }
+
+    </script>
+</body>
+
+</html>

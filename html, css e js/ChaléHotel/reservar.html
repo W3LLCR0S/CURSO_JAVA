@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservar - Hotel Chalé</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/reservar.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="topo">
+            <div id="logo">
+                <h1 class="logotipo">
+                    <a href="index.html"></a>
+                </h1>
+            </div>
+            <div id="menu">
+                <div id="conteudo-menu">
+                    <div id="menu-locais">
+                        <span class="locais">
+                            Londrina - Maringá - Curitiba
+                        </span>
+                        <a class="reserva" href="reservar.html">Reservar</a>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div id="itens">
+                        <img class="texto" src="image/depor.png">
+                    </div>
+                </div>
+            </div>
+        </div><!--Fim Topo-->
+        <div id="conteudo-reserva">
+            <h2>Faça sua reserva</h2>
+            <form>
+                <div class="form-group">
+                    <label for="check-in">Check-in:</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out:</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="num-hospedes">Número de hóspedes:</label>
+                    <input type="number" id="num-hospedes" name="num-hospedes" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo-quarto">Tipo de quarto:</label>
+                    <select id="tipo-quarto" name="tipo-quarto" required>
+                        <option value="">Selecione</option>
+                        <option value="single">Single</option>
+                        <option value="duplo">Duplo</option>
+                        <option value="triplo">Triplo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem adicional:</label>
+                    <textarea id="mensagem" name="mensagem"></textarea>
+                </div>
+                <input type="submit" value="Reservar" class="custom-button">
+            </form>
+        </div>
+        <div id="rodape">
+            &copy; Copyright 2020-2021 Hotel Chalé <br>
+            [ Desenvolvido por Paulo - SENAC ]
+        </div>
+    </div><!--Fim Container-->
+</body>
+
+</html>

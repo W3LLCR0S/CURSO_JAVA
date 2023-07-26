@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #calc {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        #res {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="../code.jquery.com_jquery-3.7.0.min.js"></script>
+    <title>jQuery v1+v2</title>
+</head>
+
+<body>
+    <div id="calc">
+        <input type="number" id="v1" placeholder="valor 1">
+        <br><br>
+        <input type="number" id="v2" placeholder="valor 2">
+        <br><br>
+        <input type="number" id="res" placeholder="soma" readonly>
+        <br><br>
+        <button id="btnSoma_js">Somar JS</button>
+        <button id="btnSoma_jq">Somar JQ</button>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

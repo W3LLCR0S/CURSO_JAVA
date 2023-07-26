@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let n1, user, tent
+        n1 = 31415
+        tent = 3
+
+        do {
+            user = prompt("Informe a senha:")
+
+            if (n1 == user) {
+                document.write("Bem vindo ao sistema!")
+                break
+            } else {
+                alert("Senha incorreta.")
+                tent--
+            }
+        } while (tent > 0)
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background: url(fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.titulo {
+    top: 50px;
+    left: 100px;
+    font-size: 50px;
+    position: absolute;
+    padding: 5px 20px 5px 20px;
+    color: #00f;
+    border: 1px solid #f00;
+    border-radius: 50px;
+    background-color: #ff0;
+    box-shadow: 5px 5px 2px #000;
+}
+
+.corredor {
+    position: absolute;
+    bottom: 30px;
+    background: url(megamanSprite.png);
+    overflow: hidden;
+    height: 157px;
+    width: calc(1591px / 10);
+    animation: correr 1s steps(10) infinite,
+                mover 9s linear infinite;
+}
+
+@keyframes correr {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1591px;
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}

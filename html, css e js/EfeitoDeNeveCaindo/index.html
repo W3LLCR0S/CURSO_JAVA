@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Efeito de Neve</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            widows: 100vw;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .snowflake {
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function createSnowflake() {
+            // Cria um elemento <div> para representar um floco de neve
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+
+            // Define um tamanho, posição inicial aleatória dentro da janela
+            const size = Math.random() * 10 + 5;
+            const xPos = Math.random() * window.innerWidth;
+            const yPos = Math.random() * window.innerHeight;
+
+            // Define o estilo do floco de neve
+            snowflake.style.width = size + 'px';
+            snowflake.style.height = size + 'px';
+            snowflake.style.left = xPos + 'px';
+            snowflake.style.top = yPos + 'px';
+
+            // Adiciona o floco de neve ao corpo da página
+            document.body.appendChild(snowflake);
+
+            // Retorna o objeto contendo o elemento do floco de neve e suas coordenadas iniciais
+            return { snowflake, xPos, yPos };
+        }
+
+        function updateSnowflake(snowflake) {
+            const { xPos, yPos } = snowflake;
+
+            // Define uma velocidade aleatória para o floco de neve
+            const speed = Math.random() * 3 + 1;
+            const newPosY = yPos + speed;
+
+            // Atualiza a posição vertical do floco de neve
+            snowflake.snowflake.style.top = newPosY + 'px';
+
+            // Verifica se o floco de neve saiu da área visível da página
+            if (newPosY > window.innerHeight) {
+                // Remove o floco de neve do DOM
+                snowflake.snowflake.remove();
+
+                // Cria um novo floco de neve e atualiza sua posição
+                const newSnowflake = createSnowflake();
+                updateSnowflake(newSnowflake);
+            } else {
+                // Atualiza a posição do floco de neve e agenda a próxima atualização
+                snowflake.yPos = newPosY;
+                requestAnimationFrame(() => updateSnowflake(snowflake));
+            }
+        }
+
+        function createSnowfall() {
+            // Cria vários flakes de neve iniciais
+            for (let i = 0; i < 100; i++) {
+                const snowflake = createSnowflake();
+                updateSnowflake(snowflake);
+            }
+        }
+
+        // Inicia a queda da neve
+        createSnowfall();
+    </script>
+</body>
+
+</html>
