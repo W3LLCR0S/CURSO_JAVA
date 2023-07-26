@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Minha Página</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .menu li {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: inherit;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: #888;
+        }
+
+        .menu li.active>a {
+            color: #333;
+        }
+
+        .dark-mode .menu {
+            background-color: #333;
+        }
+
+        .theme-switch {
+            font-size: 20px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+
+        .content {
+            margin-top: 70px;
+        }
+
+        .content-item {
+            display: none;
+        }
+
+        .dark-mode .content-item {
+            color: #fff;
+        }
+
+        .about {
+            display: block;
+        }
+
+        .contacts {
+            display: none;
+        }
+
+        .contact {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .dark-mode .contact {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contact h3 {
+            margin-top: 0;
+        }
+
+        .contact p {
+            margin: 0;
+        }
+
+        a {
+            color: #4bc0c0;
+            text-decoration: none;
+            /* Remova a sublinhado padrão dos links */
+        }
+
+        .dark-mode a {
+            color: #FCE205;
+            text-decoration: none;
+            /* Remova a sublinhado padrão dos links */
+        }
+
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .submenu {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .submenu a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .submenu a:hover {
+            color: #888;
+        }
+
+        .skills-chart {
+            margin-top: 20px;
+        }
+
+        .skill {
+            margin-bottom: 10px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Ícones das redes sociais */
+        .social-icon {
+            display: inline-block;
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+            background-size: cover;
+        }
+
+        .instagram-icon {
+            background-image: url('instagram-icon.png');
+            /* Caminho da imagem do ícone do Instagram */
+        }
+
+        .linkedin-icon {
+            background-image: url('linkedin-icon.png');
+            /* Caminho da imagem do ícone do LinkedIn */
+        }
+
+        .twitter-icon {
+            background-image: url('twitter-icon.png');
+            /* Caminho da imagem do ícone do Twitter */
+        }
+
+        .github-icon {
+            background-image: url('github-icon.png');
+            /* Caminho da imagem do ícone do GitHub */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Minha Página</h1>
+
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li class="parent-menu">
+                <a href="#habilidades">Habilidades</a>
+                <ul class="submenu">
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                </ul>
+            </li>
+            <li><a href="#contato">Contato</a></li>
+            <li class="theme-switch" onclick="toggleTheme()"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+                    <path
+                        d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
+                </svg></li>
+        </ul>
+
+        <div class="content">
+            <div class="content-item" id="inicio">
+                <h2>Início</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum iure exercitationem ab!</p>
+            </div>
+
+            <div class="content-item" id="sobre">
+                <h2>Sobre</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi ducimus repellendus?</p>
+            </div>
+
+            <div class="content-item" id="habilidades">
+                <h2>Habilidades</h2>
+                <div class="skills-chart">
+                    <canvas id="habilidadesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="content-item" id="contato">
+                <h2>Contato</h2>
+                <div class="contact">
+                    <h3>Você pode me contatar em:</h3>
+                    <p>E-mail: <a href="mailto:paulosof@gmail.com">paulosof@gmail.com</a></p>
+                    <p>Telefone: <a href="tel:+5543984463432">43 98446-3432</a></p>
+                    <p style="margin-top: 30px;">
+                    <h3>Redes Sociais:</h3>
+                    <a href="https://www.instagram.com/meu_perfil" target="_blank"
+                        class="social-icon instagram-icon"></a>
+                    <a href="https://www.linkedin.com/in/meu_perfil" target="_blank"
+                        class="social-icon linkedin-icon"></a>
+                    <a href="https://twitter.com/meu_perfil" target="_blank" class="social-icon twitter-icon"></a>
+                    <a href="https://github.com/meu_perfil" target="_blank" class="social-icon github-icon"></a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-item" id="html">
+                <h2>HTML</h2>
+                <p>Aqui está o conteúdo sobre HTML.</p>
+            </div>
+
+            <div class="content-item" id="css">
+                <h2>CSS</h2>
+                <p>Aqui está o conteúdo sobre CSS.</p>
+            </div>
+
+            <div class="content-item" id="javascript">
+                <h2>JavaScript</h2>
+                <p>Aqui está o conteúdo sobre JavaScript.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Exibe o conteúdo da página inicial assim que a página for carregada
+        const inicioContent = document.getElementById("inicio");
+        inicioContent.style.display = 'block';
+
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+
+            const habilidadesChart = Chart.instances[0];
+            const backgroundColor = body.classList.contains('dark-mode') ? 'rgba(239, 253, 95, 0.2)' : 'rgba(75, 192, 192, 0.2)';
+            const borderColor = body.classList.contains('dark-mode') ? 'rgba(252, 226, 5, 1)' : 'rgba(75, 192, 192, 1)';
+
+            habilidadesChart.data.datasets[0].backgroundColor = backgroundColor;
+            habilidadesChart.data.datasets[0].borderColor = borderColor;
+            habilidadesChart.update();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuLinks = document.querySelectorAll('.menu li a');
+            const contentItems = document.querySelectorAll('.content-item');
+            const submenus = document.querySelectorAll('.submenu');
+
+            menuLinks.forEach(function (link, index) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remover a classe 'active' de todos os links do menu
+                    menuLinks.forEach(function (link) {
+                        link.classList.remove('active');
+                    });
+
+                    // Adicionar a classe 'active' ao link clicado
+                    link.classList.add('active');
+
+                    /* Atualizar a URL do navegador manualmente
+                    const href = link.getAttribute('href');
+                    history.pushState({}, '', href); */
+
+                    // Ocultar todos os itens de conteúdo
+                    contentItems.forEach(function (item) {
+                        item.style.display = 'none';
+                    });
+
+                    // Exibir o item de conteúdo correspondente ao link clicado
+                    const target = link.getAttribute('href');
+                    const contentItem = document.querySelector(target);
+                    contentItem.style.display = 'block';
+                });
+            });
+
+            // Mostrar o submenu ao passar o mouse
+            submenus.forEach(function (submenu) {
+                const parent = submenu.parentNode;
+                parent.addEventListener('mouseenter', function () {
+                    submenu.style.display = 'block';
+                });
+
+                parent.addEventListener('mouseleave', function () {
+                    submenu.style.display = 'none';
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Dados do gráfico
+            const habilidadesData = {
+                labels: ['HTML', 'CSS', 'JavaScript'],
+                datasets: [{
+                    label: 'Nível de habilidade',
+                    data: [90, 85, 80],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor de fundo do gráfico (tema claro)
+                    borderColor: 'rgba(75, 192, 192, 1)', // Cor da borda do gráfico (tema claro)
+                    borderWidth: 1
+                }]
+            };
+
+            // Opções do gráfico
+            const habilidadesOptions = {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            };
+
+            // Configuração do gráfico
+            const habilidadesChartConfig = {
+                type: 'bar',
+                data: habilidadesData,
+                options: habilidadesOptions
+            };
+
+            // Renderizar o gráfico
+            const habilidadesChartCanvas = document.getElementById('habilidadesChart').getContext('2d');
+            new Chart(habilidadesChartCanvas, habilidadesChartConfig);
+        });
+    </script>
+</body>
+
+</html>

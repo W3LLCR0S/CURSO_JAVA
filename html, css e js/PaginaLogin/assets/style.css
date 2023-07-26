@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta a altura do body a 100% da altura da janela */
+    background-color: #121012;
+    overflow: hidden;
+}
+
+#conteiner {
+    width: 100%;
+    max-width: 260px; /* Define uma largura máxima para o conteiner */
+    height: auto; /* Permite que o conteiner tenha altura variável conforme o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.box-login {
+    width: 100%;
+    max-width: 400px; /* Define uma largura máxima para a box-login */
+    position: fixed;
+}
+
+form {
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #7fffaa;
+    text-align: center;
+    margin-top: -8px;
+}
+
+.caixa-entrada {
+    position: relative;
+    margin: 20px 0;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    border-radius: 40px;
+    transition: .5s ease;
+    color: white;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+    color: white;
+    pointer-events: none;
+    transition: .5 ease;
+}
+
+.esqueceu-senha {
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: lightgrey;
+    position: relative;
+    padding: 7%;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background-color: #7fffaa;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #1f293a;
+    font-weight: 700;
+}
+
+#conteiner span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background-color: #006414;
+    border-radius: 8px;
+
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+    transform-origin: 128px;
+    animation: rotacao 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+
+@keyframes rotacao {
+    0% {
+        background: #5ccb5f;
+    }
+
+    25% {
+        background: #006414;
+    }
+}
+
+.caixa-entrada input:focus~label,
+.caixa-entrada input:valid~label {
+    top: 1px;
+    font-size: .8em;
+    background-color: black;
+    padding: 0 6px;
+    color: #7fffaa;
+}
+
+.caixa-entrada input:focus,
+.caixa-entrada input:valid {
+    border-color: #7fffaa;
+}
+
+.caixa-entrada input {
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px;
+}

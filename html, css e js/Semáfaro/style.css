@@ -1,0 +1,128 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #d1d1d1;
+    overflow: hidden;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    overflow: hidden; /* Adicione o overflow hidden para esconder o conteúdo fora da tela */
+}
+
+.semaforo {
+    width: 80px;
+    height: 200px;
+    background: #343434;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -10px -10px 30px 0 #000,
+                10px 10px 30px 0 #444 40%;
+}
+
+.semaforo:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: -10px -10px 10px 0 #444 25%,
+                10px 10px 10px 0 #000 25%;
+}
+
+.luz {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.3; /* Defina a opacidade inicial */
+    transition: opacity 0.3s ease; /* Adicione uma transição para suavizar as mudanças de opacidade */
+}
+
+.vermelho {
+    background-color: red;
+    opacity: 1; /* Defina a opacidade para o vermelho como 1 */
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.verde {
+    background-color: green;
+}
+
+.semaforo1 {
+    margin-left: 50px;
+}
+
+.semaforo2 {
+    margin-right: 50px;
+}
+
+.carro {
+    position: absolute;
+}
+
+.carro1 {
+    top: 0px;
+    left: 300px;
+    width: 200px; /* Defina a largura desejada para o carro 1 */
+}
+
+.carro2 {
+    bottom: 20px;
+    right: 200px; /* Ajuste a posição inicial do carro 2 */
+    width: 200px; /* Defina a largura desejada para o carro 2 */
+    transform: translateX(100%);
+    transition: transform 4s linear;
+}
+
+.container.moveCarro1 .carro1 {
+    transform: translateX(calc(-100% - 100vw));
+}
+
+.container.moveCarro2 .carro2 {
+    transform: translateX(calc(-100% - 100vw)); /* Ajuste o valor da transformação para levar o carro até o final da página */
+}
+
+.moveDown {
+    animation: moveDownAnimation 2s linear forwards;
+}
+
+.moveLeft {
+    animation: moveLeftAnimation 2s linear forwards;
+}
+
+@keyframes moveDownAnimation {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: calc(100% + 200px); /* Adicione a altura do carro para evitar que ele fique visível */
+    }
+}
+
+@keyframes moveLeftAnimation {
+    0% {
+        right: -200px; /* Ajuste a posição inicial do carro 2 */
+    }
+    100% {
+        right: calc(100% - 200px); /* Ajuste a posição final do carro 2 para que ele fique no final da página */
+    }
+}

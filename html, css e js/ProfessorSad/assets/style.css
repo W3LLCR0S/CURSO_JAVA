@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+.prof{
+    background-image: url(images/prof-sad.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 500px;
+    z-index: -1;
+}
+.chuva{
+    background: url(images/chuva.png);
+    height: 100vh;
+    animation: choveChuva 0.5s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes choveChuva {
+    0% {background-position: 0% 0%;}
+    100% {background-position: 2% 100%;}
+}
+
+.chuva::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: raios 5s linear infinite;
+    opacity: 0;
+}
+
+@keyframes raios{
+    0% { opacity: 0;}
+    10% { opacity: 0;}
+    11% { opacity: 0.5;}
+    14% { opacity: 0;}
+    20% { opacity: 0.5;}
+    24% { opacity: 0;}
+    40% { opacity: 0.5;}
+    55% { opacity: 0;}
+    65% { opacity: 1;}
+    70% { opacity: 0.5;}
+    75% { opacity: 0;}
+}
